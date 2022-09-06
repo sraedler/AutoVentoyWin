@@ -1,0 +1,1 @@
+%SYSTEMDRIVE% && cd "%1\SDI*" && SDIO_auto.bat
