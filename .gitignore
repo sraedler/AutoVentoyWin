@@ -1,0 +1,12 @@
+*.iso
+.Spotlight-V100
+System Volume Information
+.fseventsd
+._*
+desktop.ini
+.TemporaryItems
+$RECYCLE.BIN
+.DS_Store
+New folder
+.Trashes
+SetupComplete/Scripts/activateOffice.cmd

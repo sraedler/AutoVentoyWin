@@ -1,16 +1,14 @@
 {
     "control":[
         { "VTOY_DEFAULT_MENU_MODE": "1" },
-        { "VTOY_WIN11_BYPASS_CHECK": "1" },
-        { "VTOY_DEFAULT_SEARCH_ROOT": "/ISO" }
+        { "VTOY_DEFAULT_SEARCH_ROOT": "/ISO" },
+        { "VTOY_WIN11_BYPASS_CHECK": "1" }
     ],
     "auto_install":[
         {
             "parent": "/ISO/Win10",
             "template":[
-                "/ventoy/config/Disk1_ENG.xml",
                 "/ventoy/config/Disk1_GER.xml",
-                "/ventoy/config/ManualDisk_ENG.xml",
                 "/ventoy/config/ManualDisk_GER.xml"
             ]
         }

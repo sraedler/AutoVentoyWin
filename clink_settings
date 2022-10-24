@@ -1,0 +1,107 @@
+# name: Argument color
+# type: color
+color.arg = bold
+
+# name: Argument info color
+# type: color
+color.arginfo = yellow
+
+# name: Shell command completions
+# type: color
+color.cmd = bold
+
+# name: Color for < and > redirection symbols
+# type: color
+color.cmdredir = bold
+
+# name: Color for & and | command separators
+# type: color
+color.cmdsep = bold
+
+# name: Color for comment row
+# type: color
+color.comment_row = bright white on cyan
+
+# name: Description completion color
+# type: color
+color.description = bright cyan
+
+# name: Doskey completions
+# type: color
+color.doskey = bold cyan
+
+# name: Filtered completion color
+# type: color
+color.filtered = bold
+
+# name: Flag color
+# type: color
+color.flag = default
+
+# name: Color for preferred branch completions
+# type: color
+color.git.star = bright green
+
+# name: For user-interaction prompts
+# type: color
+color.interact = bold
+
+# name: Message area color
+# type: color
+color.message = default
+
+# name: Color for suggestion text
+# type: color
+color.suggestion = bright black
+
+# name: Unexpected argument color
+# type: color
+color.unexpected = default
+
+# name: Color for yarn run local module
+# type: color
+color.yarn.module = bright green
+
+# name: Color for yarn run project.json script
+# type: color
+color.yarn.script = bright blue
+
+# name: Controls when past prompts are collapsed
+# type: enum
+# options: off,always,same_dir
+prompt.transient = off
+
+# When this file is named "default_settings" and is in the binaries
+# directory or profile directory, it provides enhanced default settings.
+
+# Override built-in default settings with ones that provide a more
+# enhanced Clink experience.
+
+autosuggest.enable                = True
+clink.default_bindings            = windows
+cmd.ctrld_exits                   = True
+color.arginfo                     = sgr 38;5;172
+color.argmatcher                  = sgr 1;38;5;40
+color.cmd                         = sgr 1;38;5;231
+color.cmdredir                    = sgr 38;5;172
+color.cmdsep                      = sgr 38;5;214
+color.comment_row                 = sgr 38;5;87;48;5;18
+color.description                 = sgr 38;5;39
+color.doskey                      = sgr 1;38;5;75
+color.executable                  = sgr 1;38;5;33
+color.filtered                    = sgr 38;5;231
+color.flag                        = sgr 38;5;117
+color.hidden                      = sgr 38;5;160
+color.histexpand                  = sgr 97;48;5;55
+color.horizscroll                 = sgr 38;5;16;48;5;30
+color.input                       = sgr 38;5;222
+color.readonly                    = sgr 38;5;28
+color.selected_completion         = sgr 38;5;16;48;5;254
+color.selection                   = sgr 38;5;16;48;5;179
+color.suggestion                  = sgr 38;5;239
+color.unrecognized                = sgr 38;5;203
+history.max_lines                 = 25000
+history.time_stamp                = show
+match.expand_envvars              = True
+match.substring                   = True
+

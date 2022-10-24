@@ -14,11 +14,11 @@ Notes: Win10 64 UEFI US Max ptn
 
         <component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <SetupUILanguage>
-                <UILanguage>de-DE</UILanguage>
+                <UILanguage>en-US</UILanguage>
             </SetupUILanguage>
             <InputLocale>0407:00000407</InputLocale>
             <SystemLocale>de-DE</SystemLocale>
-            <UILanguage>de-DE</UILanguage>
+            <UILanguage>en-US</UILanguage>
             <UILanguageFallback>de-DE</UILanguageFallback>
             <UserLocale>de-DE</UserLocale>
         </component>
@@ -54,7 +54,7 @@ Notes: Win10 64 UEFI US Max ptn
         <component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <InputLocale>0407:00000407</InputLocale>
             <SystemLocale>de-DE</SystemLocale>
-            <UILanguage>de-DE</UILanguage>
+            <UILanguage>en-US</UILanguage>
             <UILanguageFallback>de-DE</UILanguageFallback>
             <UserLocale>de-DE</UserLocale>
         </component>

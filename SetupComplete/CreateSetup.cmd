@@ -12,10 +12,10 @@ set PRESETUPDIR=%SETUPDIR%\PreSetup\
 
 
 :: create Temp folder and set log path
-md %systemdrive%\Temp > nul
-set log=%systemdrive%\temp\%~n0.log
+::md %systemdrive%\Temp > nul
+set log=%systemdrive%\%~n0.log
 
-echo "Copy started\r\n" >> %log%
+echo "Copy started" >> %log%
 
 xcopy /herky %FILEDIR%\*.* %SETUPDIR%\ >> %log%
 
@@ -42,10 +42,15 @@ tar -xf %SETUPFILES%\office.zip -C %SETUPFILES%
 
 :: install Choco
 	::download install.ps1
-%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "((new-object net.webclient).DownloadFile('https://community.chocolatey.org/install.ps1','%PRESETUPDIR%\install.ps1'))"
+::%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "((new-object net.webclient).DownloadFile('https://community.chocolatey.org/install.ps1','%PRESETUPDIR%\install.ps1'))"
 	::run installer
-%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "& '%PRESETUPDIR%\install.ps1' %*"
+::%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "& '%PRESETUPDIR%\install.ps1' %*"
 
+:: install Scoop
+	::download install.ps1
+%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "((new-object net.webclient).DownloadFile('https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1','%PRESETUPDIR%\install.ps1'))"
+	::run installer
+%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "& '%PRESETUPDIR%\install.ps1 >> $ENV:SYSTEMDRIVE/scoop_install.log; ($LASTEXITCODE -eq 0) ? Write-Output "Scoop was installed correctly" >> $ENV:SYSTEMDRIVE/scoop_install.log  : Write-Output "Scoop was not installed correctly" >> $ENV:SYSTEMDRIVE/scoop_install.log' %*"
 
 :: push tag to stop
 echo stop > %systemroot%\DONE_SDI.tag
